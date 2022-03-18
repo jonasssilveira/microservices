@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  mysqlsrv:
+    image: mysql:8.0.27
+    environment:
+      MYSQL_ROOT_PASSWORD: xz2k600600
+      MYSQL_DATABASE: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - ../scripts:/docker-entrypoint-initdb.d
+  redis:
+    image: redis
+    command: redis-server --requirepass Redis2019!
+    ports:
+      - "6379:6379"
