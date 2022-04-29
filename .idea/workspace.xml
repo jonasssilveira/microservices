@@ -4,7 +4,72 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11d6496a-b8bc-40f4-9246-9c436a0adcdf" name="Changes" comment="" />
+    <list default="true" id="11d6496a-b8bc-40f4-9246-9c436a0adcdf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/superstore-produto.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produto/docker/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produto/scripts/001_CREATE_MYSQL_DB_.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/SuperstoreProdutoApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/controllers/CategoriaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/controllers/ProdutoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/database/repository/CategoriaRepositoryasdsadsdu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/database/repository/ProdutoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/domain/model/Categoria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/domain/model/Produto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/exceptions/BadRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/exceptions/BadRequestExceptionDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/exceptions/NotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/exceptions/NotFoundExceptionDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/handle/RestExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/service/CategoriaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/service/ProdutoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produtos/docker/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produtos/scripts/001_CREATE_MYSQL_DB_.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/controllers/CategoriaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/controllers/ProdutoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/database/repository/CategoriaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/database/repository/ProdutoRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/domain/model/Categoria.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/domain/model/Produto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/exceptions/BadRequestException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/exceptions/BadRequestExceptionDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/exceptions/NotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/exceptions/NotFoundExceptionDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/handle/RestExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/service/CategoriaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/service/ProdutoService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/infraestrutura/config/CacheConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e59c054f-6d0e-49e5-a9e0-580d8dbc9dc2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e59c054f-6d0e-49e5-a9e0-580d8dbc9dc2/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e59c054f-6d0e-49e5-a9e0-580d8dbc9dc2/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e59c054f-6d0e-49e5-a9e0-580d8dbc9dc2/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e59c054f-6d0e-49e5-a9e0-580d8dbc9dc2/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e59c054f-6d0e-49e5-a9e0-580d8dbc9dc2/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-usuario/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-usuario/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-usuario/docker/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-usuario/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-usuario/docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-usuario/scripts/001_CREATE_MYSQL_DB_.sql" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-usuario/scripts/001_CREATE_MYSQL_DB_.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-usuario/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-usuario/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-vendas/docker/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-vendas/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-vendas/docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/domain/dto/UsuarioDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/domain/interfaces/ProdutoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/domain/interfaces/ProdutoClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/domain/interfaces/UsuarioClient.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/domain/interfaces/VendaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/domain/interfaces/VendaDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/domain/usecase/VendaTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/domain/usecase/VendaTransaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/infraestrutura/repository/VendaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/infraestrutura/repository/VendaRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/infraestrutura/services/VendaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/infraestrutura/services/VendaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-vendas/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-vendas/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-vendas/src/test/java/br/com/ecommerce/vendas/VendaTransactionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-vendas/src/test/java/br/com/ecommerce/vendas/VendaTransactionTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,10 +79,16 @@
     <projectState path="$PROJECT_DIR$/Vendas">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/superstore-produto">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$/superstore-usuario">
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/superstore-vendas">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/superstore_produto">
       <ProjectState />
     </projectState>
   </component>
@@ -33,6 +104,10 @@
         <projects_view>
           <tree_state>
             <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="superstore-produto" type="f1a62948:ProjectNode" />
+              </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="superstore-usuario" type="f1a62948:ProjectNode" />
@@ -52,11 +127,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Record" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -107,18 +185,20 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/superstore-produtos/HELP.md" />
     <property name="jdk.selected.JAVA_MODULE" value="17" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/infraestrutura" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/superstore-vendas" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/superstore-produto" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.23793103" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
@@ -128,11 +208,18 @@
       <recent name="br.com.ecommerce.vendas.usecase" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/superstore-vendas" />
-      <recent name="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/infraestrutura" />
-      <recent name="$PROJECT_DIR$/superstore-usuario" />
-      <recent name="$PROJECT_DIR$/superstore-usuario/src/test/java" />
-      <recent name="$PROJECT_DIR$/superstore-usuario/src/main/resources" />
+      <recent name="$PROJECT_DIR$/superstore-produto" />
+      <recent name="$PROJECT_DIR$/superstore-produto/src/main/resources" />
+      <recent name="$PROJECT_DIR$/superstore-produto/src/main/java" />
+      <recent name="$PROJECT_DIR$/superstore-produtos" />
+      <recent name="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/models/exceptions/controllers/service" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.ecommerce.superstore.produtos.controllers" />
+      <recent name="br.com.ecommerce.superstore.produtos.service" />
+      <recent name="br.com.ecommerce.superstore.produtos.repository" />
+      <recent name="br.com.ecommerce.superstore.produtos.model" />
+      <recent name="br.com.ecommerce.superstore.vendas.infraestrutura.config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -142,15 +229,103 @@
       </set>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="SuperstoreVendasApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="superstore-vendas.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.ecommerce.superstore.vendas.SuperstoreVendasApplication" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+  <component name="RunManager" selected="Spring Boot.MSUsuario">
+    <configuration name="VendaTransactionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/superstore-vendas" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;br.com.ecommerce.vendas.VendaTransactionTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="VendaTransactionTest.shouldCreateSellBecauseThereAreNoSellSaved" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/superstore-vendas" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;br.com.ecommerce.vendas.VendaTransactionTest.shouldCreateSellBecauseThereAreNoSellSaved&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MSUsuario" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="superstore-usuario.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="br.com.ecommerce.superstore.usuario.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.ecommerce.superstore.usuario.MSUsuario" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SuperstoreProdutoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="superstore-produto.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="produtos.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="produtos.SuperstoreProdutoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="docker: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="superstore-vendas/docker/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.docker: Compose Deployment" />
+      <item itemvalue="Gradle.VendaTransactionTest.shouldCreateSellBecauseThereAreNoSellSaved" />
+      <item itemvalue="Gradle.VendaTransactionTest" />
+      <item itemvalue="Spring Boot.SuperstoreProdutoApplication" />
+      <item itemvalue="Spring Boot.MSUsuario" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.MSUsuario" />
+        <item itemvalue="Spring Boot.SuperstoreProdutoApplication" />
+        <item itemvalue="Docker.docker: Compose Deployment" />
+        <item itemvalue="Gradle.VendaTransactionTest" />
+        <item itemvalue="Gradle.VendaTransactionTest.shouldCreateSellBecauseThereAreNoSellSaved" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -168,6 +343,12 @@
       <workItem from="1644974410067" duration="6124000" />
       <workItem from="1646090382487" duration="3728000" />
       <workItem from="1647568147584" duration="4205000" />
+      <workItem from="1648517410058" duration="10505000" />
+      <workItem from="1649380072856" duration="65000" />
+      <workItem from="1649390621769" duration="708000" />
+      <workItem from="1651196788303" duration="8139000" />
+      <workItem from="1651204958701" duration="27000" />
+      <workItem from="1651205048582" duration="906000" />
     </task>
     <servers />
   </component>
@@ -179,7 +360,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/superstore-vendas/src/test/java/br/com/ecommerce/vendas/VendaTransactionTest.java</url>
-          <line>93</line>
+          <line>79</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
@@ -188,6 +369,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Microservicos$VendaTransactionTest_shouldSellBecauseThereAreProductsAndSellIsClosed.ic" NAME="VendaTransactionTest.shouldSellBecauseThereAreProductsAndSellIsClosed Coverage Results" MODIFIED="1644975953906" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Microservicos$VendaTransactionTest__1_.ic" NAME="VendaTransactionTest (1) Coverage Results" MODIFIED="1646092126686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Microservicos$VendaTransactionTest.ic" NAME="VendaTransactionTest Coverage Results" MODIFIED="1648523223105" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Microservicos$VendaTransactionTest_shouldCreateSellBecauseThereAreNoSellSaved.ic" NAME="VendaTransactionTest.shouldCreateSellBecauseThereAreNoSellSaved Coverage Results" MODIFIED="1644976737684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

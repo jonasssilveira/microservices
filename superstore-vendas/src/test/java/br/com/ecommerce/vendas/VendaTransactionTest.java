@@ -1,10 +1,8 @@
 package br.com.ecommerce.vendas;
 
-import br.com.ecommerce.superstore.vendas.domain.dto.UsuarioDTO;
 import br.com.ecommerce.superstore.vendas.domain.entities.Produto;
 import br.com.ecommerce.superstore.vendas.domain.entities.Venda;
 import br.com.ecommerce.superstore.vendas.domain.interfaces.ProdutoClient;
-import br.com.ecommerce.superstore.vendas.domain.interfaces.UsuarioClient;
 import br.com.ecommerce.superstore.vendas.domain.interfaces.VendaDAO;
 import br.com.ecommerce.superstore.vendas.domain.usecase.VendaTransaction;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,8 +10,10 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 
 import java.math.BigDecimal;
-import java.rmi.NoSuchObjectException;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -30,16 +30,11 @@ public class VendaTransactionTest {
     @Mock
     ProdutoClient produtoClient;
 
-    @Mock
-    UsuarioClient usuarioClient;
-
-    UsuarioDTO usuario;
-
     VendaTransaction transactionsOfSells;
 
-    Produto productInStock;
+    List<Produto> productsStockless;
 
-    Produto productNotInStock;
+    List<Produto> productsInStock;
 
     Venda vendaAberta;
 
@@ -48,28 +43,20 @@ public class VendaTransactionTest {
     @BeforeEach
     public void setup() {
         vendaDAO = mock(VendaDAO.class);
+
         produtoClient = mock(ProdutoClient.class);
-        usuarioClient = mock(UsuarioClient.class);
-        productInStock = new Produto("Papelex",
+
+        productsStockless = new ArrayList<>();
+
+        productsInStock = new ArrayList<>();
+
+        productsStockless.add(new Produto("Papelex",
                 "Papel higienico",
                 new BigDecimal("100"),
-                20);
-
-        productNotInStock = new Produto("Monark",
-                "Não o nazista",
-                BigDecimal.ZERO,
-                20);
+                0));
 
         transactionsOfSells = new VendaTransaction(vendaDAO,
-                produtoClient,
-                usuarioClient);
-
-        usuario = new UsuarioDTO("123456",
-                "jonas@gmail.com",
-                "jonas",
-                "123456",
-                "22222",
-                true);
+                produtoClient);
 
         vendaAberta = new Venda(LocalDate.now(), LocalDate.now(),
                 false,
@@ -84,10 +71,9 @@ public class VendaTransactionTest {
     }
 
     @Test
-    void shouldSellBecauseThereAreProductsAndSellIsClosed() throws NoSuchObjectException {
+    void shouldSellBecauseThereAreProductsAndSellIsClosed() {
         //arrange
-        when(produtoClient.getProduto(anyString())).thenReturn(productInStock);
-        when(usuarioClient.getUsuario(anyString())).thenReturn(Optional.of(usuario));
+        when(produtoClient.verifyIfSomeProductIsInFalt(anyString())).thenReturn(productsInStock);
         when(vendaDAO.getVendaByUserId(anyString())).thenReturn(Optional.of(vendaFechada));
 
         //act
@@ -99,48 +85,21 @@ public class VendaTransactionTest {
     }
 
     @Test
-    void shouldNotSellBecauseThereAreASellOpen() throws NoSuchObjectException {
+    void shouldNotSellBecauseThereAreASellOpen() {
         //arrange
-        when(produtoClient.getProduto(anyString())).thenReturn(productInStock);
-        when(usuarioClient.getUsuario(anyString())).thenReturn(Optional.of(usuario));
+        when(produtoClient.verifyIfSomeProductIsInFalt(anyString())).thenReturn(productsStockless);
         when(vendaDAO.getVendaByUserId(anyString())).thenReturn(Optional.of(vendaAberta));
 
 
         //act
-        var transactionResult = transactionsOfSells.sell("123456");
-
-        //assert
-        assertTrue(transactionResult);
+       assertThrows(NoSuchElementException.class,()->transactionsOfSells.sell("123456"));
 
     }
 
     @Test
-    void shouldNotSellBecauseThereAreProductsButNoUser() {
+    void shouldCreateSellBecauseThereAreNoSellSaved() {
         //arrange
-        when(produtoClient.getProduto(anyString())).thenReturn(productInStock);
-        when(usuarioClient.getUsuario(anyString())).thenReturn(Optional.empty());
-
-        //act
-        assertThrows(NoSuchObjectException.class,
-                () -> transactionsOfSells.sell("123456"));
-    }
-
-    @Test
-    void shouldNotCreateSellBecauseThereAreAnotherSellToThatUser() throws NoSuchObjectException {
-        //arrange
-        when(produtoClient.getProduto(anyString())).thenReturn(productNotInStock);
-        when(usuarioClient.getUsuario(anyString())).thenReturn(Optional.empty());
-
-        //act
-        assertThrows(NoSuchObjectException.class, () -> transactionsOfSells.getVendaByUserId("123456"));
-
-    }
-
-    @Test
-    void shouldCreateSellBecauseThereAreNoSellSaved() throws NoSuchObjectException {
-        //arrange
-        when(produtoClient.getProduto(anyString())).thenReturn(productNotInStock);
-        when(usuarioClient.getUsuario(anyString())).thenReturn(Optional.of(usuario));
+        when(produtoClient.verifyIfSomeProductIsInFalt(anyString())).thenReturn(productsStockless);
         when(vendaDAO.getVendaByUserId(anyString())).thenReturn(Optional.empty());
 
         //act

@@ -12,4 +12,5 @@ import java.util.Optional;
 public interface VendaRepository extends CrudRepository<VendaDTO, String> {
     Page<VendaDTO> findAll(Pageable pageable);
     Optional<VendaDTO> findAllById(String id);
+    Optional<VendaDTO> findById(String id);
 }

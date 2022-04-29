@@ -1,1 +1,1 @@
-create database user
+create database usuario

@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/superstore-produto" />
     <file type="web" url="file://$PROJECT_DIR$/superstore-usuario" />
     <file type="web" url="file://$PROJECT_DIR$/superstore-vendas" />
+    <file type="web" url="file://$PROJECT_DIR$/superstore_produto" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">

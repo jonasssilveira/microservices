@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  mysqlsrv:
+    image: mysql:8.0.27
+    container_name: superstore_produto_db
+    environment:
+      MYSQL_ROOT_PASSWORD: xz2k600600
+      MYSQL_DATABASE: superstore_produto
+    ports:
+      - "3306:3306"
+    volumes:
+      - ../scripts:/docker-entrypoint-initdb.d
+  redis:
+    image: redis
+    container_name: superstore_sell_redis
+    command: redis-server --requirepass Redis2019!
+    ports:
+      - "6379:6379"
