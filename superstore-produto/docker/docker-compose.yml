@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  mysqlsrv:
-    container_name: superstore_produto
+  mysql-produto:
+    container_name: superstore_produto_db
     image: mysql:8.0.27
     environment:
       MYSQL_ROOT_PASSWORD: xz2k600600

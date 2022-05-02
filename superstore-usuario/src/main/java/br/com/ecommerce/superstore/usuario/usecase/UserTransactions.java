@@ -1,5 +1,7 @@
 package br.com.ecommerce.superstore.usuario.usecase;
 
+import br.com.ecommerce.superstore.usuario.domain.entity.dto.EmailDTO;
+import br.com.ecommerce.superstore.usuario.usecase.interfaces.queue.Kafka;
 import br.com.ecommerce.superstore.usuario.usecase.interfaces.user.UserDAO;
 import br.com.ecommerce.superstore.usuario.usecase.interfaces.venda.Vendas;
 import org.springframework.data.domain.Page;
@@ -15,11 +17,12 @@ public class UserTransactions {
 
     private final Vendas vendas;
     private final UserDAO userDAO;
-
-    public UserTransactions(final Vendas vendas, final UserDAO userDAO) {
+    private final Kafka kafka;
+    public UserTransactions(final Vendas vendas, final UserDAO userDAO, Kafka kafka) {
         this.vendas = vendas;
         this.userDAO = userDAO;
-     }
+        this.kafka = kafka;
+    }
 
     private Optional<Venda> getSalesFromUser(Usuario user) {
         Optional<Venda> venda = vendas.getSalesFromUser(user);
@@ -51,6 +54,13 @@ public class UserTransactions {
 
     public UserDTO getById(String id){
         return this.userDAO.getById(id);
+    }
+
+    public void login(String email, String password) {
+        Optional<Usuario> userbyEmailAndPassword = userDAO.findByEmailAndPassword(email, password);
+        var user = userbyEmailAndPassword.get();
+        if(user.getPrimeiroAcesso())
+            kafka.send(new EmailDTO(user.getEmail(), "", ""));
     }
 
 }

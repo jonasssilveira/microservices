@@ -13,4 +13,5 @@ public interface UserDAO {
     Page<UserDTO> getAll(Pageable pageable);
     Usuario save(Usuario user);
     Boolean delete(String id);
+    Optional<Usuario> findByEmailAndPassword(String email, String password);
 }

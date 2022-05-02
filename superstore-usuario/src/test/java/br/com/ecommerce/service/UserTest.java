@@ -1,5 +1,7 @@
 package br.com.ecommerce.service;
 
+import br.com.ecommerce.superstore.usuario.domain.entity.dto.EmailDTO;
+import br.com.ecommerce.superstore.usuario.usecase.interfaces.queue.Kafka;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -10,6 +12,8 @@ import br.com.ecommerce.superstore.usuario.domain.entity.dto.Venda;
 import br.com.ecommerce.superstore.usuario.usecase.UserTransactions;
 import br.com.ecommerce.superstore.usuario.usecase.interfaces.user.UserDAO;
 import br.com.ecommerce.superstore.usuario.usecase.interfaces.venda.Vendas;
+import org.mockito.Mock;
+
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -22,13 +26,14 @@ class UserTest {
     private UserTransactions userTransactions;
     private Vendas vendas;
     private UserDAO userDAO;
+    private Kafka kafka;
     @BeforeEach
     void setup(){
         vendas = mock(Vendas.class);
         userDAO = mock(UserDAO.class);
-
+        kafka = mock(Kafka.class);
         user = Usuario.builder().email("jonas").id("123456").build();
-        userTransactions = new UserTransactions(vendas, userDAO);
+        userTransactions = new UserTransactions(vendas, userDAO, kafka);
 
     }
 
@@ -91,5 +96,30 @@ class UserTest {
 
     }
 
+    @Test
+    void testeSomething(){
+        //arrange
+        user.setPrimeiroAcesso(true);
+        when(userDAO.findByEmailAndPassword(user.getEmail(),
+                user.getPassword())).thenReturn(Optional.of(user));
+        EmailDTO email = new EmailDTO(user.getEmail(), "", "");
+        //act
+        userTransactions.login(user.getEmail(), user.getPassword());
+        //verify
+        verify(kafka, times(1)).send(email);
+    }
+
+    @Test
+    void testeSomething1(){
+        //arrange
+        user.setPrimeiroAcesso(false);
+        when(userDAO.findByEmailAndPassword(user.getEmail(),
+                user.getPassword())).thenReturn(Optional.of(user));
+        EmailDTO email = new EmailDTO(user.getEmail(), "", "");
+        //act
+        userTransactions.login(user.getEmail(), user.getPassword());
+        //verify
+        verify(kafka, times(0)).send(email);
+    }
 
 }

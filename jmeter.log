@@ -1,0 +1,22 @@
+2022-05-01 23:56:13,155 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2022-05-01 23:56:13,172 INFO o.a.j.JMeter: Loading user properties from: /usr/bin/apache-jmeter-5.4.3/bin/user.properties
+2022-05-01 23:56:13,172 INFO o.a.j.JMeter: Loading system properties from: /usr/bin/apache-jmeter-5.4.3/bin/system.properties
+2022-05-01 23:56:13,176 INFO o.a.j.JMeter: Copyright (c) 1998-2021 The Apache Software Foundation
+2022-05-01 23:56:13,177 INFO o.a.j.JMeter: Version 5.4.3
+2022-05-01 23:56:13,177 INFO o.a.j.JMeter: java.version=11.0.12
+2022-05-01 23:56:13,177 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2022-05-01 23:56:13,177 INFO o.a.j.JMeter: os.name=Linux
+2022-05-01 23:56:13,177 INFO o.a.j.JMeter: os.arch=amd64
+2022-05-01 23:56:13,177 INFO o.a.j.JMeter: os.version=5.13.0-40-generic
+2022-05-01 23:56:13,177 INFO o.a.j.JMeter: file.encoding=UTF-8
+2022-05-01 23:56:13,177 INFO o.a.j.JMeter: java.awt.headless=null
+2022-05-01 23:56:13,177 INFO o.a.j.JMeter: Max memory     =1073741824
+2022-05-01 23:56:13,178 INFO o.a.j.JMeter: Available Processors =6
+2022-05-01 23:56:13,183 INFO o.a.j.JMeter: Default Locale=English (EN)
+2022-05-01 23:56:13,183 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2022-05-01 23:56:13,183 INFO o.a.j.JMeter: JMeterHome=/usr/bin/apache-jmeter-5.4.3
+2022-05-01 23:56:13,183 INFO o.a.j.JMeter: user.dir  =/mnt/sdb2/Jonas/Projetos jonas/Microservicos
+2022-05-01 23:56:13,183 INFO o.a.j.JMeter: PWD       =/mnt/sdb2/Jonas/Projetos jonas/Microservicos
+2022-05-01 23:56:13,191 INFO o.a.j.JMeter: IP: 192.168.1.2 Name: jonas FullName: jonas
+2022-05-01 23:56:13,396 INFO o.a.j.JMeter: Setting LAF to: com.github.weisj.darklaf.DarkLaf:com.github.weisj.darklaf.theme.DarculaTheme
+2022-05-01 23:56:13,634 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties

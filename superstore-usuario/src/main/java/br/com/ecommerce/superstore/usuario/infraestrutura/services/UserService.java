@@ -1,5 +1,6 @@
 package br.com.ecommerce.superstore.usuario.infraestrutura.services;
 
+import br.com.ecommerce.superstore.usuario.adapters.kafka.Kafka;
 import br.com.ecommerce.superstore.usuario.domain.entity.Usuario;
 import br.com.ecommerce.superstore.usuario.domain.entity.dto.EnderecoDTO;
 import br.com.ecommerce.superstore.usuario.usecase.UserTransactions;
@@ -25,15 +26,16 @@ public class UserService {
     final Vendas vendas;
 
     final UserTransactions userTransactions;
-
+    final Kafka kafka;
     public UserService(@Autowired final UserDAOImpl userDAOImpl,
                        @Autowired final Vendas vendas) {
         this.userDAOImpl = userDAOImpl;
         this.vendas = vendas;
+        this.kafka = new Kafka();
         userTransactions = new UserTransactions(
                 this.vendas,
-                this.userDAOImpl
-        );
+                this.userDAOImpl,
+                this.kafka);
 
     }
     @CacheEvict(value = "UserDTO",cacheManager = "cache", allEntries = true)

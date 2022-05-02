@@ -5,70 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11d6496a-b8bc-40f4-9246-9c436a0adcdf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/superstore-produto.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produto/docker/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produto/scripts/001_CREATE_MYSQL_DB_.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/SuperstoreProdutoApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/controllers/CategoriaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/controllers/ProdutoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/database/repository/CategoriaRepositoryasdsadsdu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/database/repository/ProdutoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/domain/model/Categoria.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/domain/model/Produto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/exceptions/BadRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/exceptions/BadRequestExceptionDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/exceptions/NotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/exceptions/NotFoundExceptionDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/handle/RestExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/service/CategoriaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/java/produtos/service/ProdutoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produto/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produtos/docker/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produtos/scripts/001_CREATE_MYSQL_DB_.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/controllers/CategoriaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/controllers/ProdutoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/database/repository/CategoriaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/database/repository/ProdutoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/domain/model/Categoria.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/domain/model/Produto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/exceptions/BadRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/exceptions/BadRequestExceptionDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/exceptions/NotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/exceptions/NotFoundExceptionDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/handle/RestExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/service/CategoriaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/service/ProdutoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/infraestrutura/config/CacheConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-usuario/src/main/java/br/com/ecommerce/superstore/usuario/adapters/kafka/Kafka.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-usuario/src/main/java/br/com/ecommerce/superstore/usuario/domain/entity/dto/EmailDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/superstore-usuario/src/main/java/br/com/ecommerce/superstore/usuario/usecase/interfaces/queue/Kafka.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e59c054f-6d0e-49e5-a9e0-580d8dbc9dc2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e59c054f-6d0e-49e5-a9e0-580d8dbc9dc2/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e59c054f-6d0e-49e5-a9e0-580d8dbc9dc2/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e59c054f-6d0e-49e5-a9e0-580d8dbc9dc2/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e59c054f-6d0e-49e5-a9e0-580d8dbc9dc2/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e59c054f-6d0e-49e5-a9e0-580d8dbc9dc2/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f8613bc-65fb-48f7-8484-2f68d68e1d43.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f8613bc-65fb-48f7-8484-2f68d68e1d43/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f8613bc-65fb-48f7-8484-2f68d68e1d43/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f8613bc-65fb-48f7-8484-2f68d68e1d43/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f8613bc-65fb-48f7-8484-2f68d68e1d43/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f8613bc-65fb-48f7-8484-2f68d68e1d43/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/superstore-usuario/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-usuario/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/superstore-usuario/docker/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-produto/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-produto/docker/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/superstore-usuario/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-usuario/docker/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/superstore-usuario/scripts/001_CREATE_MYSQL_DB_.sql" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-usuario/scripts/001_CREATE_MYSQL_DB_.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/superstore-usuario/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-usuario/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/superstore-vendas/docker/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-usuario/src/main/java/br/com/ecommerce/superstore/usuario/adapters/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-usuario/src/main/java/br/com/ecommerce/superstore/usuario/adapters/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-usuario/src/main/java/br/com/ecommerce/superstore/usuario/adapters/user/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-usuario/src/main/java/br/com/ecommerce/superstore/usuario/adapters/user/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-usuario/src/main/java/br/com/ecommerce/superstore/usuario/infraestrutura/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-usuario/src/main/java/br/com/ecommerce/superstore/usuario/infraestrutura/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-usuario/src/main/java/br/com/ecommerce/superstore/usuario/usecase/UserTransactions.java" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-usuario/src/main/java/br/com/ecommerce/superstore/usuario/usecase/UserTransactions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-usuario/src/main/java/br/com/ecommerce/superstore/usuario/usecase/interfaces/user/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-usuario/src/main/java/br/com/ecommerce/superstore/usuario/usecase/interfaces/user/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/superstore-usuario/src/test/java/br/com/ecommerce/service/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-usuario/src/test/java/br/com/ecommerce/service/UserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/superstore-vendas/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-vendas/docker/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/domain/dto/UsuarioDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/domain/interfaces/ProdutoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/domain/interfaces/ProdutoClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/domain/interfaces/UsuarioClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/domain/interfaces/VendaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/domain/interfaces/VendaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/domain/usecase/VendaTransaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/domain/usecase/VendaTransaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/infraestrutura/repository/VendaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/infraestrutura/repository/VendaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/infraestrutura/services/VendaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-vendas/src/main/java/br/com/ecommerce/superstore/vendas/infraestrutura/services/VendaService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/superstore-vendas/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-vendas/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/superstore-vendas/src/test/java/br/com/ecommerce/vendas/VendaTransactionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/superstore-vendas/src/test/java/br/com/ecommerce/vendas/VendaTransactionTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,6 +160,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="br.com.ecommerce.vendas.domain.entities.dto" />
       <recent name="br.com.ecommerce.vendas.domain.entities" />
       <recent name="br.com.ecommerce.vendas.interfaces" />
       <recent name="br.com.ecommerce.vendas.usecase" />
@@ -215,11 +173,11 @@
       <recent name="$PROJECT_DIR$/superstore-produtos/src/main/java/br/com/ecommerce/superstore/produtos/models/exceptions/controllers/service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="br.com.ecommerce.superstore.usuario.domain.entity.dto" />
       <recent name="br.com.ecommerce.superstore.produtos.controllers" />
       <recent name="br.com.ecommerce.superstore.produtos.service" />
       <recent name="br.com.ecommerce.superstore.produtos.repository" />
       <recent name="br.com.ecommerce.superstore.produtos.model" />
-      <recent name="br.com.ecommerce.superstore.vendas.infraestrutura.config" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -229,11 +187,11 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.MSUsuario">
-    <configuration name="VendaTransactionTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.UserTest.testeSomething1">
+    <configuration name="UserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/superstore-vendas" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/superstore-usuario" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
@@ -243,7 +201,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;br.com.ecommerce.vendas.VendaTransactionTest&quot;" />
+            <option value="&quot;br.com.ecommerce.service.UserTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -253,10 +211,10 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="VendaTransactionTest.shouldCreateSellBecauseThereAreNoSellSaved" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserTest.testeSomething" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/superstore-vendas" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/superstore-usuario" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
@@ -266,7 +224,30 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;br.com.ecommerce.vendas.VendaTransactionTest.shouldCreateSellBecauseThereAreNoSellSaved&quot;" />
+            <option value="&quot;br.com.ecommerce.service.UserTest.testeSomething&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserTest.testeSomething1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/superstore-usuario" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;br.com.ecommerce.service.UserTest.testeSomething1&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -289,41 +270,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SuperstoreProdutoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="superstore-produto.main" />
+    <configuration name="SuperstoreVendasApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="superstore-vendas.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="produtos.*" />
+          <option name="PATTERN" value="br.com.ecommerce.superstore.vendas.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="produtos.SuperstoreProdutoApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="br.com.ecommerce.superstore.vendas.SuperstoreVendasApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="docker: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
-      <deployment type="docker-compose.yml">
-        <settings>
-          <option name="sourceFilePath" value="superstore-vendas/docker/docker-compose.yml" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Docker.docker: Compose Deployment" />
-      <item itemvalue="Gradle.VendaTransactionTest.shouldCreateSellBecauseThereAreNoSellSaved" />
-      <item itemvalue="Gradle.VendaTransactionTest" />
-      <item itemvalue="Spring Boot.SuperstoreProdutoApplication" />
       <item itemvalue="Spring Boot.MSUsuario" />
+      <item itemvalue="Spring Boot.SuperstoreVendasApplication" />
+      <item itemvalue="Gradle.UserTest.testeSomething" />
+      <item itemvalue="Gradle.UserTest" />
+      <item itemvalue="Gradle.UserTest.testeSomething1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.UserTest.testeSomething1" />
+        <item itemvalue="Gradle.UserTest.testeSomething" />
+        <item itemvalue="Gradle.UserTest" />
+        <item itemvalue="Spring Boot.SuperstoreVendasApplication" />
         <item itemvalue="Spring Boot.MSUsuario" />
-        <item itemvalue="Spring Boot.SuperstoreProdutoApplication" />
-        <item itemvalue="Docker.docker: Compose Deployment" />
-        <item itemvalue="Gradle.VendaTransactionTest" />
-        <item itemvalue="Gradle.VendaTransactionTest.shouldCreateSellBecauseThereAreNoSellSaved" />
       </list>
     </recent_temporary>
   </component>
@@ -349,6 +322,8 @@
       <workItem from="1651196788303" duration="8139000" />
       <workItem from="1651204958701" duration="27000" />
       <workItem from="1651205048582" duration="906000" />
+      <workItem from="1651284295920" duration="3956000" />
+      <workItem from="1651456452812" duration="3705000" />
     </task>
     <servers />
   </component>
@@ -362,6 +337,11 @@
           <url>file://$PROJECT_DIR$/superstore-vendas/src/test/java/br/com/ecommerce/vendas/VendaTransactionTest.java</url>
           <line>79</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/superstore-usuario/src/main/java/br/com/ecommerce/superstore/usuario/usecase/UserTransactions.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
