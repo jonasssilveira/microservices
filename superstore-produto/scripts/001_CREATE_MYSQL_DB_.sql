@@ -1,1 +1,1 @@
-create database produto
+create database superstore_produto

@@ -10,6 +10,12 @@
         </processorPath>
         <module name="superstore-vendas.main" />
       </profile>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="eureka" />
+      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Microservicos" target="11" />
@@ -26,6 +32,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Microservicos" options="-parameters" />
+      <module name="eureka" options="-parameters" />
       <module name="superstore-produtos" options="-parameters" />
     </option>
   </component>

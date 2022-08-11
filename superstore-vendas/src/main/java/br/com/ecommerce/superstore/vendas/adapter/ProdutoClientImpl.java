@@ -1,2 +1,8 @@
-package br.com.ecommerce.superstore.vendas.adapter;public class ProdutoClientImpl {
+package br.com.ecommerce.superstore.vendas.adapter;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(url = "localhost:8080/")
+public class ProdutoClientImpl {
+
 }

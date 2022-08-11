@@ -1,11 +1,6 @@
 server:
-  port: 8888
-
-spring:
-  profiles:
-    active: native
-  cloud:
-    config:
-      server:
-        native:
-          search-locations: c:/microservice-repo
+  port: 8761
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
