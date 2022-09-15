@@ -1,12 +1,13 @@
 package br.com.ecommerce.superstore.usuario.infraestrutura.services;
 
 import br.com.ecommerce.superstore.usuario.adapters.kafka.Kafka;
-import br.com.ecommerce.superstore.usuario.domain.entity.Usuario;
+import br.com.ecommerce.superstore.usuario.adapters.user.UserDAOImpl;
+import br.com.ecommerce.superstore.usuario.domain.entity.dto.UserDTO;
+import br.com.ecommerce.superstore.usuario.domain.entity.model.Usuario;
 import br.com.ecommerce.superstore.usuario.domain.entity.dto.EnderecoDTO;
+import br.com.ecommerce.superstore.usuario.infraestrutura.exception.ConflictException;
 import br.com.ecommerce.superstore.usuario.usecase.UserTransactions;
 import br.com.ecommerce.superstore.usuario.usecase.interfaces.venda.Vendas;
-import br.com.ecommerce.superstore.usuario.domain.entity.dto.UserDTO;
-import br.com.ecommerce.superstore.usuario.infraestrutura.exception.ConflictException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
@@ -16,7 +17,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 
 import javax.transaction.Transactional;
-import br.com.ecommerce.superstore.usuario.adapters.user.UserDAOImpl;
 
 @Service
 @Transactional

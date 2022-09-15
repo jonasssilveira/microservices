@@ -1,18 +1,17 @@
 package br.com.ecommerce.service;
 
+import br.com.ecommerce.superstore.usuario.adapters.kafka.Kafka;
 import br.com.ecommerce.superstore.usuario.domain.entity.dto.EmailDTO;
-import br.com.ecommerce.superstore.usuario.usecase.interfaces.queue.Kafka;
+import br.com.ecommerce.superstore.usuario.domain.entity.dto.UserDTO;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import br.com.ecommerce.superstore.usuario.domain.entity.Usuario;
-import br.com.ecommerce.superstore.usuario.domain.entity.dto.UserDTO;
+import br.com.ecommerce.superstore.usuario.domain.entity.model.Usuario;
 import br.com.ecommerce.superstore.usuario.domain.entity.dto.Venda;
 import br.com.ecommerce.superstore.usuario.usecase.UserTransactions;
 import br.com.ecommerce.superstore.usuario.usecase.interfaces.user.UserDAO;
 import br.com.ecommerce.superstore.usuario.usecase.interfaces.venda.Vendas;
-import org.mockito.Mock;
 
 import java.util.Optional;
 

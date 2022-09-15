@@ -38,7 +38,7 @@ public class UserDTO{
     private Boolean primeiroAcesso;
 
     @OneToMany(mappedBy ="usuario")
-    Set<EnderecoDTO> enderecos;
+    Set<br.com.ecommerce.superstore.usuario.domain.entity.dto.EnderecoDTO> enderecos;
 
     public UserDTO() {
         this.id = UUID.randomUUID().toString();

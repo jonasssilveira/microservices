@@ -1,5 +1,9 @@
 package br.com.ecommerce.superstore.usuario.infraestrutura.handle;
 
+import br.com.ecommerce.superstore.usuario.infraestrutura.exception.NotFoundExceptionDetails;
+import br.com.ecommerce.superstore.usuario.infraestrutura.exception.BadRequestExceptionDetails;
+import br.com.ecommerce.superstore.usuario.infraestrutura.exception.ConflictException;
+import br.com.ecommerce.superstore.usuario.infraestrutura.exception.ConflictExceptionDetails;
 import br.com.ecommerce.superstore.usuario.infraestrutura.exception.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

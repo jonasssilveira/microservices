@@ -1,4 +1,4 @@
-package br.com.ecommerce.superstore.usuario.domain.entity;
+package br.com.ecommerce.superstore.usuario.domain.entity.model;
 
 import lombok.*;
 

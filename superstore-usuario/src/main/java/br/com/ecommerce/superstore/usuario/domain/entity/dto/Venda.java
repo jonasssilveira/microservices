@@ -1,6 +1,6 @@
 package br.com.ecommerce.superstore.usuario.domain.entity.dto;
 
-import br.com.ecommerce.superstore.usuario.domain.entity.Usuario;
+import br.com.ecommerce.superstore.usuario.domain.entity.model.Usuario;
 import lombok.*;
 
 import java.time.LocalDate;

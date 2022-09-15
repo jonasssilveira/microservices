@@ -5,7 +5,7 @@ import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import br.com.ecommerce.superstore.usuario.domain.entity.Endereco;
+import br.com.ecommerce.superstore.usuario.domain.entity.model.Endereco;
 import java.util.HashSet;
 import java.util.Set;
 
