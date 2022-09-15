@@ -1,5 +1,6 @@
 package br.com.ecommerce.vendas;
 
+import br.com.ecommerce.superstore.vendas.domain.dto.VendaDTO;
 import br.com.ecommerce.superstore.vendas.domain.entities.Produto;
 import br.com.ecommerce.superstore.vendas.domain.entities.Venda;
 import br.com.ecommerce.superstore.vendas.domain.interfaces.ProdutoClient;
@@ -36,9 +37,9 @@ public class VendaTransactionTest {
 
     List<Produto> productsInStock;
 
-    Venda vendaAberta;
+    VendaDTO vendaAberta;
 
-    Venda vendaFechada;
+    VendaDTO vendaFechada;
 
     @BeforeEach
     public void setup() {
@@ -58,14 +59,17 @@ public class VendaTransactionTest {
         transactionsOfSells = new VendaTransaction(vendaDAO,
                 produtoClient);
 
-        vendaAberta = new Venda(LocalDate.now(), LocalDate.now(),
+        vendaAberta = new VendaDTO("2343213",
+                LocalDate.now(),
+                LocalDate.now(),
                 false,
-                "2343213",
                 "234444");
 
-        vendaFechada = new Venda(LocalDate.now(), LocalDate.now(),
-                true,
+        vendaFechada = new VendaDTO(
                 "2343213",
+                LocalDate.now(),
+                LocalDate.now(),
+                true,
                 "234444");
 
     }
@@ -92,7 +96,7 @@ public class VendaTransactionTest {
 
 
         //act
-       assertThrows(NoSuchElementException.class,()->transactionsOfSells.sell("123456"));
+        assertThrows(NoSuchElementException.class, () -> transactionsOfSells.sell("123456"));
 
     }
 

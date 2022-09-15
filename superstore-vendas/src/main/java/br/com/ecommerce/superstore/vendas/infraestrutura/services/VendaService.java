@@ -2,9 +2,7 @@ package br.com.ecommerce.superstore.vendas.infraestrutura.services;
 
 import br.com.ecommerce.superstore.vendas.adapter.VendaDAOImpl;
 import br.com.ecommerce.superstore.vendas.domain.dto.VendaDTO;
-import br.com.ecommerce.superstore.vendas.domain.entities.Venda;
 import br.com.ecommerce.superstore.vendas.domain.usecase.VendaTransaction;
-import br.com.ecommerce.superstore.vendas.infraestrutura.exception.NotFoundException;
 import br.com.ecommerce.superstore.vendas.infraestrutura.repository.VendaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
@@ -16,12 +14,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class VendaService {
 
+    VendaDAOImpl vendaDAO;
     VendaTransaction vendaTransaction;
     VendaRepository vendaRepository;
     VendaService(@Autowired VendaDAOImpl vendaDAO,
                  @Autowired VendaRepository vendaRepository){
-        vendaTransaction = new VendaTransaction(vendaDAO,
-                null);
+        this.vendaDAO = vendaDAO;
+        this.vendaTransaction = new VendaTransaction(vendaDAO,null);
         this.vendaRepository = vendaRepository;
     }
 
@@ -31,7 +30,7 @@ public class VendaService {
     }
 
     public VendaDTO getById(String id){
-        return this.vendaRepository.findById(id).get();
+        return this.vendaDAO.getVendaById(id);
     }
 
     public ResponseEntity<Boolean> sell(String id){

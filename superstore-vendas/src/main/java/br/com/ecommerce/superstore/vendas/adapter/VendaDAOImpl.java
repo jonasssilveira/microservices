@@ -22,29 +22,27 @@ public class VendaDAOImpl implements VendaDAO {
     @Override
     public Boolean pedidoToVenda(Venda vendaAberta) {
         vendaAberta.setFechado(true);
-        VendaDTO vendaFechada = VendaDTO.vendaTOVendaDTO(vendaAberta);
-        this.vendaRepository.save(vendaFechada);
+        this.vendaRepository.save(vendaAberta);
         return true;
     }
 
     @Override
     public Boolean createVenda(Venda venda) {
-        VendaDTO criarVenda = VendaDTO.vendaTOVendaDTO(venda);
-        this.vendaRepository.save(criarVenda);
+        this.vendaRepository.save(venda);
         return true;
     }
 
     @Override
-    public Optional<Venda> getVendaByUserId(String userId) {
-        Optional<VendaDTO> vendaByUserId = Optional.ofNullable(this.vendaRepository.findById(userId)
+    public Optional<VendaDTO> getVendaByUserId(String userId) {
+        Optional<Venda> vendaByUserId = Optional.ofNullable(this.vendaRepository.findById(userId)
                 .orElseThrow(() -> new NotFoundException("Venda não existe")));
-        return Optional.of(VendaDTO.vendaDTOTOVenda(vendaByUserId.get()));
+        return Optional.of(VendaDTO.vendaTOVendaDTO(vendaByUserId.get()));
     }
 
     @Override
-    public Venda getVendaById(String id) {
-        VendaDTO vendaPeloId = this.vendaRepository.findById(id)
-                .orElseThrow(()-> new NotFoundException("Venda não existe"));
-        return VendaDTO.vendaDTOTOVenda(vendaPeloId);
+    public VendaDTO getVendaById(String id) {
+        Venda venda_não_existe = this.vendaRepository.findById(id)
+                .orElseThrow(() -> new NotFoundException("Venda não existe"));
+        return VendaDTO.vendaTOVendaDTO(venda_não_existe);
     }
 }
