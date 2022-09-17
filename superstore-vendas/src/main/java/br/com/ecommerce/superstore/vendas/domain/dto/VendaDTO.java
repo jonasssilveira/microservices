@@ -43,8 +43,11 @@ public class VendaDTO {
     }
 
     public static Venda vendaDTOTOVenda(VendaDTO vendaDTO) {
-        return new Venda(vendaDTO.getId(), vendaDTO.getUsuarioId(), vendaDTO.getDateCreated(),
-                vendaDTO.getBuyDate(), vendaDTO.getFechado());
+        return new Venda(vendaDTO.getId(),
+                vendaDTO.getDateCreated(),
+                vendaDTO.getBuyDate(),
+                vendaDTO.getFechado(),
+                vendaDTO.getUsuarioId());
     }
 
 }

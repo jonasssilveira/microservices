@@ -2,6 +2,7 @@ package produtos.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import produtos.domain.model.Produto;
@@ -56,6 +57,21 @@ public class ProdutoController {
     @ResponseStatus(HttpStatus.OK)
     public String deleteProduto(@PathVariable("id") String id){
         return produtoService.deleteProduto(id);
+    }
+
+    @PatchMapping("buy/{id}/{quantToBuy}")
+    @ResponseBody
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<Boolean> buy(@PathVariable("id") String id, @PathVariable("quantToBuy") Integer quantToBuy ){
+        produtoService.buyProduct(id,quantToBuy);
+        return ResponseEntity.ok(true);
+    }
+    @PatchMapping("sell/{id}/{quantToSell}")
+    @ResponseBody
+    @ResponseStatus(HttpStatus.OK)
+    public ResponseEntity<Boolean> sell(@PathVariable("id") String id, @PathVariable("quantToSell") Integer quantToSell ){
+        produtoService.sellProduct(id,quantToSell);
+        return ResponseEntity.ok(true);
     }
 
 }

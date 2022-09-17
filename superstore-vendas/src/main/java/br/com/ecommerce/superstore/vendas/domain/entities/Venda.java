@@ -25,10 +25,6 @@ public class Venda {
 
     @Getter
     @Setter
-    private String user_id;
-
-    @Getter
-    @Setter
     @Column
     private LocalDate dateCreated;
 
@@ -41,6 +37,16 @@ public class Venda {
     @Setter
     @Column
     private Boolean fechado;
+
+    @Getter
+    @Setter
+    @Column
+    private String userId;
+
+    @Getter
+    @Setter
+    @Column
+    private String produtoId;
 
 }
 

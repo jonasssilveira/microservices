@@ -12,7 +12,10 @@ import java.util.Optional;
 
 @Repository
 public interface VendaRepository extends CrudRepository<Venda, String> {
-    Page<VendaDTO> findAll(Pageable pageable);
-    List<VendaDTO> findAllById(String id);
+    Page<Venda> findAll(Pageable pageable);
+    Page<Venda> findAllByProdutos(String id,Pageable pageable);
+    List<Venda> findAllByUserId(String id);
+    List<Venda> findByUserAndFechado(String id, Boolean fe);
     Optional<Venda> findById(String id);
+    List<Venda> findVendaByFechado(Boolean fechado);
 }

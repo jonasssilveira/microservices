@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import produtos.database.repository.ProdutoRepository;
 import produtos.domain.model.Produto;
 import produtos.exceptions.BadRequestException;
+import produtos.exceptions.NotFoundException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,6 +64,23 @@ public class ProdutoService {
         return id;
     }
 
-    public 
+    public void sellProduct(String id, Integer quantidadeParaVenda){
+        Produto produto = produtoRepository.findById(id).orElseThrow(()->new NotFoundException("Produto não encontrado"));
+        if(produto.getQuantidade().equals(0))
+            throw new BadRequestException("Não existe produto disponivel para venda");
+        if(produto.getQuantidade()-quantidadeParaVenda==0)
+            throw new BadRequestException("Quantidade de pedido superior a quantidade em estoque");
+        produto.setQuantidade(produto.getQuantidade()-quantidadeParaVenda);
+        this.produtoRepository.save(produto);
+
+    }
+
+    public void buyProduct(String id, Integer quantidadeParaCompra) {
+        Produto produto = this.getProdutoById(id);
+        produto.setQuantidade(produto.getQuantidade() + quantidadeParaCompra);
+        this.produtoRepository.save(produto);
+    }
+
+
 
 }
