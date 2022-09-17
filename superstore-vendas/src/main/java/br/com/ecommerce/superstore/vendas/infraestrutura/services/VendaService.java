@@ -1,11 +1,9 @@
 package br.com.ecommerce.superstore.vendas.infraestrutura.services;
 
-import br.com.ecommerce.superstore.vendas.adapter.ProdutoClientImpl;
+import br.com.ecommerce.superstore.vendas.adapter.ProdutoClientRepository;
 import br.com.ecommerce.superstore.vendas.adapter.VendaDAOImpl;
 import br.com.ecommerce.superstore.vendas.domain.dto.VendaDTO;
-import br.com.ecommerce.superstore.vendas.domain.entities.Produto;
 import br.com.ecommerce.superstore.vendas.domain.entities.Venda;
-import br.com.ecommerce.superstore.vendas.domain.interfaces.ProdutoClient;
 import br.com.ecommerce.superstore.vendas.domain.usecase.VendaTransaction;
 import br.com.ecommerce.superstore.vendas.infraestrutura.exception.BadRequestException;
 import br.com.ecommerce.superstore.vendas.infraestrutura.repository.VendaRepository;
@@ -17,9 +15,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class VendaService {
@@ -28,10 +26,10 @@ public class VendaService {
     VendaTransaction vendaTransaction;
     VendaRepository vendaRepository;
 
-    ProdutoClientImpl produtoClient;
+    ProdutoClientRepository produtoClient;
     VendaService(@Autowired VendaDAOImpl vendaDAO,
                  @Autowired VendaRepository vendaRepository,
-                 @Autowired ProdutoClientImpl produtoClient){
+                 @Autowired ProdutoClientRepository produtoClient){
         this.vendaDAO = vendaDAO;
         this.vendaTransaction = new VendaTransaction(vendaDAO,null);
         this.vendaRepository = vendaRepository;
@@ -39,7 +37,7 @@ public class VendaService {
     }
 
     @Cacheable(value = "VendaDTO",cacheManager = "cache")
-    public Page<Venda> getAll(Pageable pageable){
+    public Page<Venda> listVendas(Pageable pageable){
         return this.vendaRepository.findAll(pageable);
     }
 
@@ -51,15 +49,9 @@ public class VendaService {
         return ResponseEntity.ok(this.vendaTransaction.sell(id));
     }
 
-    public List<Venda> listVendas(){
-        List<Venda> vendaList = new ArrayList<>();
-        vendaRepository.findAll().forEach(vendaList::add);
-        vendaList.forEach(System.out::println);
-        return vendaList;
-    }
-
-    public List<Venda> listByUser(String userId){
-        return vendaRepository.findAllByUserId(userId) ;
+    public List<VendaDTO> listByUser(String userId){
+        List<Venda> allByUserId = vendaRepository.findAllByUserId(userId);
+        return allByUserId.stream().map(v -> VendaDTO.vendaTOVendaDTO(v)).collect(Collectors.toList());
     }
 
     public Page<Venda> listByProduto(String produtoId, Pageable pageable){
@@ -75,16 +67,6 @@ public class VendaService {
         return vendaRepository.findByUserAndFechado(userId, true);
     }
 
-    public List<Venda> getPedidoPorUsuario(String userId){
-        return vendaRepository.findByUserAndFechado(userId, false);
-    }
-
-    public Venda updateVenda(Venda venda){
-        Venda venda1 = isVendaClosed(venda);
-        Venda vendaUpdate = updateVenda(venda1, venda);
-        vendaRepository.save(vendaUpdate);
-        return vendaUpdate;
-    }
     public String deleteVenda(String id){
         Venda venda = getVendaById(id);
         isVendaClosed(venda);
@@ -96,11 +78,6 @@ public class VendaService {
         return vendaRepository.save(venda);
     }
 
-    public Venda updateVenda(Venda vendaUpdate, Venda venda){
-        vendaUpdate.setProdutoId(venda.getProdutoId());
-        return vendaUpdate;
-    }
-
     public Venda isVendaClosed(Venda venda){
         Optional<Venda> vendaOptional = vendaRepository.findById(venda.getId());
         Venda venda1 = vendaOptional.orElseThrow(()->new BadRequestException("Pedido inexistente!"));
@@ -110,11 +87,12 @@ public class VendaService {
         return venda;
     }
 
-    public Venda compraEfetuada(Venda venda){
-        Venda v = getVendaById(venda.getId());
+    public Venda compraEfetuada(VendaDTO vendaRequest){
+        Venda v = getVendaById(vendaRequest.getId());
         v.setBuyDate(LocalDate.now());
         v.setFechado(true);
         v.setBuyDate(LocalDate.now());
+        vendaRequest.getProdutoRequests().stream().map(product->produtoClient.sell(product.getProductId(), product.getQuantToSell()));
         return vendaRepository.save(v);
     }
 

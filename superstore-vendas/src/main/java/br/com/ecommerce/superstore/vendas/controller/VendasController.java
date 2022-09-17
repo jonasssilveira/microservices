@@ -1,5 +1,6 @@
 package br.com.ecommerce.superstore.vendas.controller;
 
+import br.com.ecommerce.superstore.vendas.domain.dto.VendaDTO;
 import br.com.ecommerce.superstore.vendas.domain.entities.Venda;
 import br.com.ecommerce.superstore.vendas.infraestrutura.services.VendaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -25,14 +27,15 @@ public class VendasController {
     @GetMapping
     @ResponseBody
     @ResponseStatus(HttpStatus.OK)
-    public List<Venda> listVendas(){
-        return vendaService.listVendas();
+    public Page<Venda> listVendas(@PageableDefault(sort = "nome",
+            direction = Sort.Direction.ASC, page = 0, size = 20) Pageable paginacao){
+        return vendaService.listVendas(paginacao);
     }
 
     @PostMapping("open/user/{userId}")
     @ResponseBody
     @ResponseStatus(HttpStatus.OK)
-    public List<Venda> getAllPedidosByUser(@PathVariable("userId") String userId){
+    public List<VendaDTO> getAllPedidosByUser(@PathVariable("userId") String userId){
         return vendaService.listByUser(userId);
     }
 
@@ -64,17 +67,10 @@ public class VendasController {
         return vendaService.getVendaById(id);
     }
 
-    @PatchMapping
-    @ResponseBody
-    @ResponseStatus(HttpStatus.OK)
-    public Venda updateVenda(@RequestBody Venda venda){
-        return vendaService.updateVenda(venda);
-    }
-
     @PatchMapping("/finalizar-compra")
     @ResponseBody
     @ResponseStatus(HttpStatus.OK)
-    public Venda compraEfetuada(@RequestBody Venda venda){
+    public Venda compraEfetuada(@RequestBody VendaDTO venda){
         return vendaService.compraEfetuada(venda);
     }
 

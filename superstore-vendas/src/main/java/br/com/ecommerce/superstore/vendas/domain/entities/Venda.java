@@ -43,10 +43,6 @@ public class Venda {
     @Column
     private String userId;
 
-    @Getter
-    @Setter
-    @Column
-    private String produtoId;
 
 }
 

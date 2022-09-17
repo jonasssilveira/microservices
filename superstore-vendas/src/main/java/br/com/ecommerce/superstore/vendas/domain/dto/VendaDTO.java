@@ -6,6 +6,7 @@ import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.List;
 
 public class VendaDTO {
     @Getter
@@ -19,6 +20,9 @@ public class VendaDTO {
     private String id;
     @Getter
     private String usuarioId;
+
+    @Getter
+    private List<ProdutoRequest> produtoRequests;
 
     public VendaDTO(String id,
                     LocalDate dateCreated,
