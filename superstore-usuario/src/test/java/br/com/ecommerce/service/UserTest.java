@@ -3,16 +3,17 @@ package br.com.ecommerce.service;
 import br.com.ecommerce.superstore.usuario.adapters.kafka.Kafka;
 import br.com.ecommerce.superstore.usuario.domain.entity.dto.EmailDTO;
 import br.com.ecommerce.superstore.usuario.domain.entity.dto.UserDTO;
+import br.com.ecommerce.superstore.usuario.usecase.interfaces.venda.VendasClient;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import br.com.ecommerce.superstore.usuario.domain.entity.model.Usuario;
-import br.com.ecommerce.superstore.usuario.domain.entity.dto.Venda;
+import br.com.ecommerce.superstore.usuario.infraestrutura.feign.client.response.dto.VendaResponseDTO;
 import br.com.ecommerce.superstore.usuario.usecase.UserTransactions;
 import br.com.ecommerce.superstore.usuario.usecase.interfaces.user.UserDAO;
-import br.com.ecommerce.superstore.usuario.usecase.interfaces.venda.Vendas;
 
+import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -23,16 +24,16 @@ class UserTest {
 
     private Usuario user;
     private UserTransactions userTransactions;
-    private Vendas vendas;
+    private VendasClient vendasClient;
     private UserDAO userDAO;
     private Kafka kafka;
     @BeforeEach
     void setup(){
-        vendas = mock(Vendas.class);
+        vendasClient = mock(VendasClient.class);
         userDAO = mock(UserDAO.class);
         kafka = mock(Kafka.class);
         user = Usuario.builder().email("jonas").id("123456").build();
-        userTransactions = new UserTransactions(vendas, userDAO, kafka);
+        userTransactions = new UserTransactions(vendasClient, userDAO, kafka);
 
     }
 
@@ -40,7 +41,7 @@ class UserTest {
     @DisplayName("Deve executar a exclusão do usuario caso não encontre uma venda relacionada a ele")
     void mustDeleteUserWhenThereIsNotASaleWithThatUser(){
         //arrange
-        when(vendas.getSalesFromUser(user)).thenReturn(Optional.empty());
+        when(vendasClient.getAllPedidosByUser(user.getId())).thenReturn(List.of(null));
         when(userDAO.getById(anyString())).thenReturn(new UserDTO());
         when(userDAO.delete(anyString())).thenReturn(true);
 
@@ -55,7 +56,7 @@ class UserTest {
     @DisplayName("Não deve executar a exclusão do usuario caso encontre uma venda relacionada a ele")
     void mustNotDeleteUserWhenThereIsASaleWithThatUser(){
         //arrange
-        when(vendas.getSalesFromUser(user)).thenReturn(Optional.of(new Venda()));
+        when(vendasClient.getAllPedidosByUser(user.getId())).thenReturn(List.of(new VendaResponseDTO()));
         when(userDAO.getById(anyString())).thenReturn(new UserDTO());
         when(userDAO.delete(anyString())).thenReturn(false);
 

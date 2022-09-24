@@ -3,31 +3,31 @@ package br.com.ecommerce.superstore.usuario.usecase;
 import br.com.ecommerce.superstore.usuario.adapters.kafka.Kafka;
 import br.com.ecommerce.superstore.usuario.domain.entity.dto.EmailDTO;
 import br.com.ecommerce.superstore.usuario.domain.entity.dto.UserDTO;
+import br.com.ecommerce.superstore.usuario.domain.entity.model.Usuario;
+import br.com.ecommerce.superstore.usuario.infraestrutura.feign.client.response.dto.VendaResponseDTO;
 import br.com.ecommerce.superstore.usuario.usecase.interfaces.user.UserDAO;
-import br.com.ecommerce.superstore.usuario.usecase.interfaces.venda.Vendas;
+import br.com.ecommerce.superstore.usuario.usecase.interfaces.venda.VendasClient;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import br.com.ecommerce.superstore.usuario.domain.entity.model.Usuario;
-import br.com.ecommerce.superstore.usuario.domain.entity.dto.Venda;
-
+import java.util.List;
 import java.util.Optional;
 
 public class UserTransactions {
 
-    private final Vendas vendas;
+    private final VendasClient vendasClient;
     private final UserDAO userDAO;
     private final Kafka kafka;
-    public UserTransactions(final Vendas vendas, final UserDAO userDAO, Kafka kafka) {
-        this.vendas = vendas;
+    public UserTransactions(final VendasClient vendasClient, final UserDAO userDAO, Kafka kafka) {
+        this.vendasClient = vendasClient;
         this.userDAO = userDAO;
         this.kafka = kafka;
     }
 
-    private Optional<Venda> getSalesFromUser(Usuario user) {
-        Optional<Venda> venda = vendas.getSalesFromUser(user);
+    private List<VendaResponseDTO> getSalesFromUser(Usuario user) {
+        List<VendaResponseDTO> venda = vendasClient.getAllPedidosByUser(user.getId());
         if(venda.isEmpty())
-            return Optional.empty();
+            return List.of(null);
         return venda;
     }
 

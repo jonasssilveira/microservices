@@ -49,13 +49,9 @@ public class VendaService {
         return ResponseEntity.ok(this.vendaTransaction.sell(id));
     }
 
-    public List<VendaDTO> listByUser(String userId){
+    public List<VendaDTO> listByUserId(String userId){
         List<Venda> allByUserId = vendaRepository.findAllByUserId(userId);
         return allByUserId.stream().map(v -> VendaDTO.vendaTOVendaDTO(v)).collect(Collectors.toList());
-    }
-
-    public Page<Venda> listByProduto(String produtoId, Pageable pageable){
-        return vendaRepository.findAllByProdutos(produtoId, pageable) ;
     }
 
     public Venda getVendaById(String id){
@@ -64,7 +60,7 @@ public class VendaService {
     }
 
     public List<Venda> getVendaFechadaPorUsuario(String userId){
-        return vendaRepository.findByUserAndFechado(userId, true);
+        return vendaRepository.findByUserIdAndFechado(userId, true);
     }
 
     public String deleteVenda(String id){

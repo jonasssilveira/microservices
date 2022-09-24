@@ -1,6 +1,5 @@
 package br.com.ecommerce.superstore.vendas.infraestrutura.repository;
 
-import br.com.ecommerce.superstore.vendas.domain.dto.VendaDTO;
 import br.com.ecommerce.superstore.vendas.domain.entities.Venda;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -13,9 +12,8 @@ import java.util.Optional;
 @Repository
 public interface VendaRepository extends CrudRepository<Venda, String> {
     Page<Venda> findAll(Pageable pageable);
-    Page<Venda> findAllByProdutos(String id,Pageable pageable);
     List<Venda> findAllByUserId(String id);
-    List<Venda> findByUserAndFechado(String id, Boolean fe);
+    List<Venda> findByUserIdAndFechado(String id, Boolean fe);
     Optional<Venda> findById(String id);
     List<Venda> findVendaByFechado(Boolean fechado);
 }

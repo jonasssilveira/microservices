@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(url = "localhost:8080/")
+@FeignClient("superstore-produto")
 @Component
 public interface ProdutoClientRepository {
 

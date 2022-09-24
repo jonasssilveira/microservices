@@ -1,4 +1,4 @@
-package br.com.ecommerce.superstore.usuario.domain.entity.dto;
+package br.com.ecommerce.superstore.usuario.infraestrutura.feign.client.response.dto;
 
 import br.com.ecommerce.superstore.usuario.domain.entity.model.Usuario;
 import lombok.*;
@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class Venda {
+public class VendaResponseDTO {
 
     private Usuario user;
     private LocalDate dateCreated;
@@ -19,4 +19,5 @@ public class Venda {
     private LocalDate buyDate;
 
     private Boolean fechado;
+
 }

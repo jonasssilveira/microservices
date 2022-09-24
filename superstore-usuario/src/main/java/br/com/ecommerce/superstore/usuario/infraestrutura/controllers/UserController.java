@@ -43,8 +43,8 @@ public class UserController {
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public Boolean deleteUser(@PathVariable String id){
-        return userService.deleteUser(id);
+    public ResponseEntity<Boolean> deleteUser(@PathVariable String id){
+        return ResponseEntity.ok(userService.deleteUser(id));
     }
 
 

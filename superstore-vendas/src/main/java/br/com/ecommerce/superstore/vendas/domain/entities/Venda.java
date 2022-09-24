@@ -43,7 +43,6 @@ public class Venda {
     @Column
     private String userId;
 
-
 }
 
 
