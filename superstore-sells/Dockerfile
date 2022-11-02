@@ -1,6 +1,6 @@
 FROM openjdk:17-slim
 
-EXPOSE 8080
+EXPOSE 8082
 
 ARG JAR_FILE=build/libs/*SNAPSHOT.jar
 COPY ${JAR_FILE} superstoreprodutolication.jar

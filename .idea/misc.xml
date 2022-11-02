@@ -3,6 +3,7 @@
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/superstore-produto" />
+    <file type="web" url="file://$PROJECT_DIR$/superstore-sells" />
     <file type="web" url="file://$PROJECT_DIR$/superstore-usuario" />
     <file type="web" url="file://$PROJECT_DIR$/superstore-vendas" />
   </component>

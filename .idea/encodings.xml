@@ -4,5 +4,8 @@
     <file url="file://$PROJECT_DIR$/eureka/src" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/superstore-product/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/superstore-sell/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/superstore-venda/src/main/java" charset="UTF-8" />
   </component>
 </project>

@@ -1,8 +1,7 @@
-FROM openjdk:11-jre-slim
+FROM openjdk:17-slim
+EXPOSE 8081
 
-EXPOSE 8761
+ARG JAR_FILE=build/libs/*SNAPSHOT.jar
+COPY ${JAR_FILE} superstore-usuario.jar
 
-ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} eurekaapplication.jar
-
-ENTRYPOINT ["java","-jar","eurekaapplication.jar"]
+ENTRYPOINT ["java","-jar","superstore-usuario.jar"]

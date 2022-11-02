@@ -31,4 +31,13 @@ public class Categoria {
     @ToString.Include
     @OneToMany
     List<Produto> produtos;
+
+    @Override
+    public String toString() {
+        return "Categoria{" +
+                "id='" + id + '\'' +
+                ", nome='" + nome + '\'' +
+                ", produtos=" + produtos +
+                '}';
+    }
 }

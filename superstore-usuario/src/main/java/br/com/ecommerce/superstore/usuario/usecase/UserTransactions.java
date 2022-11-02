@@ -10,6 +10,7 @@ import br.com.ecommerce.superstore.usuario.usecase.interfaces.venda.VendasClient
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -27,7 +28,7 @@ public class UserTransactions {
     private List<VendaResponseDTO> getSalesFromUser(Usuario user) {
         List<VendaResponseDTO> venda = vendasClient.getAllPedidosByUser(user.getId());
         if(venda.isEmpty())
-            return List.of(null);
+            return Collections.emptyList();
         return venda;
     }
 

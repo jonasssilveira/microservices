@@ -13,6 +13,7 @@ import br.com.ecommerce.superstore.usuario.infraestrutura.feign.client.response.
 import br.com.ecommerce.superstore.usuario.usecase.UserTransactions;
 import br.com.ecommerce.superstore.usuario.usecase.interfaces.user.UserDAO;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -41,7 +42,7 @@ class UserTest {
     @DisplayName("Deve executar a exclusão do usuario caso não encontre uma venda relacionada a ele")
     void mustDeleteUserWhenThereIsNotASaleWithThatUser(){
         //arrange
-        when(vendasClient.getAllPedidosByUser(user.getId())).thenReturn(List.of(null));
+        when(vendasClient.getAllPedidosByUser(user.getId())).thenReturn(Collections.emptyList());
         when(userDAO.getById(anyString())).thenReturn(new UserDTO());
         when(userDAO.delete(anyString())).thenReturn(true);
 

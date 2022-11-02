@@ -1,0 +1,19 @@
+{
+  "namespace": "com.usuario.email",
+  "type": "record",
+  "name": "Email",
+  "fields": [
+    {
+      "name": "from",
+      "type": "string"
+    },
+    {
+      "name": "assunto",
+      "type": "string"
+    },
+    {
+      "name": "body",
+      "type": "string"
+    }
+  ]
+}
