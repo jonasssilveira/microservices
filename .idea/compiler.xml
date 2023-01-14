@@ -14,12 +14,13 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.22/9c08ea24c6eb714e2d6170e8122c069a0ba9aacf/lombok-1.18.22.jar" />
         </processorPath>
-        <module name="superstore-usuario.main" />
+        <module name="superstore-produto.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="superstore-product" target="17" />
       <module name="superstore-sell" target="17" />
+      <module name="superstore-user" target="11" />
       <module name="superstore-venda" target="17" />
       <module name="superstore-vendas" target="17" />
       <module name="superstore-vendas.aotMain" target="17" />
@@ -33,6 +34,7 @@
       <module name="eureka" options="-parameters" />
       <module name="superstore-product" options="-parameters" />
       <module name="superstore-sell" options="-parameters" />
+      <module name="superstore-user" options="" />
       <module name="superstore-venda" options="-parameters" />
     </option>
   </component>

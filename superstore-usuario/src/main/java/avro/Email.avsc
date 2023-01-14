@@ -1,6 +1,6 @@
 {
   "namespace": "com.usuario.email",
-  "type": "record",
+  "type": "class",
   "name": "Email",
   "fields": [
     {

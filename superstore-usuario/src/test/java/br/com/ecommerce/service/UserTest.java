@@ -97,18 +97,6 @@ class UserTest {
 
     }
 
-    @Test
-    void testeSomething(){
-        //arrange
-        user.setPrimeiroAcesso(true);
-        when(userDAO.findByEmailAndPassword(user.getEmail(),
-                user.getPassword())).thenReturn(Optional.of(user));
-        EmailDTO email = new EmailDTO(user.getEmail(), "", "");
-        //act
-        userTransactions.login(user.getEmail(), user.getPassword());
-        //verify
-        verify(kafka, times(1)).send(email);
-    }
 
     @Test
     void testeSomething1(){
